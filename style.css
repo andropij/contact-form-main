@@ -206,6 +206,7 @@ p {
     .form {
         justify-content: center;
         align-items: center;
+        min-width: 400px;
     }
 
     .form-radio .radio {
