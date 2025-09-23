@@ -5,9 +5,9 @@
 }
 
 :root {
-   --bg-color: #e3f8eb;
-   --form-color: #fff;
-   --btn-color:  #119945;
+    --bg-color: #e3f8eb;
+    --form-color: #fff;
+    --btn-color: #119945;
 }
 
 body {
@@ -17,6 +17,51 @@ body {
     justify-content: center;
 
     font-family: "Karla";
+}
+
+input,
+textarea,
+.radio-btn {
+    border: 1px solid black;
+    border-radius: 10px;
+
+    padding: 10px 20px;
+
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+
+    font-size: 20px;
+    font-family: "Karla";
+
+    outline: none;
+}
+
+input:hover,
+textarea:hover,
+.radio-btn:hover {
+    border: 1px solid var(--btn-color);
+}
+
+input:focus,
+textarea:focus,
+.radio-btn:focus-within {
+    border: 1px solid var(--btn-color);
+    background-color: var(--bg-color);
+}
+
+textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+p {
+    font-size: 25px;
+}
+
+.margin-top {
+    margin-top: 40px;
 }
 
 .form {
@@ -32,49 +77,29 @@ body {
     height: fit-content;
 }
 
-.form h1 {
-
-}
-
 .form-name {
-    margin-top: 40px;
-
-    display: flex;
-    
-    justify-content: space-between;
-
-}
-
-.form-name .input-border {
-    max-width: fit-content;
-    min-width: 315px;
-}
-
-.form-email {
-    margin-top: 40px;
-
-}
-
-.form-radio {
-    margin-top: 40px;
-}
-
-.form-radio .radio{
-    margin-top: 10px;
     display: flex;
     justify-content: space-between;
-    gap: 25px;
+    gap: 20px;
 }
 
-.form-radio .radio-btn{
+.form-name .name {
+    flex: 1;
+}
+
+.form-radio .radio {
     display: flex;
-    
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.form-radio .radio-btn {
+    display: flex;
+
     justify-content: start;
     align-items: center;
 
     gap: 25px;
-
-    padding: 0 40px;
 
     cursor: default;
 }
@@ -84,21 +109,21 @@ body {
     min-width: 20px;
     height: 20px;
 
-    cursor: pointer;
-}
+    margin-top: 0px;
 
-.form-message {
-    margin-top: 40px;
+    cursor: pointer;
 }
 
 .form-checkbox {
     display: flex;
-
+    align-items: center;
     justify-content: start;
+
     gap: 25px;
+}
 
-    margin-top: 40px;
-
+.form-checkbox input {
+    margin-top: 0;
 }
 
 .form-checkbox input {
@@ -109,7 +134,6 @@ body {
     max-width: 20px;
     min-width: 20px;
     height: 20px;
-
 }
 
 .form-checkbox label {
@@ -117,73 +141,15 @@ body {
     cursor: pointer;
 }
 
-
-.form-submit {
-    margin-top: 40px;
-
-}
-
-.form-submit input{
-
+.form-submit input {
     background: var(--btn-color);
     color: var(--bg-color);
 
     cursor: pointer;
-
-    font-size: 25px;
-
-    height: 70px;
-
 }
 
-.input-border {
-    margin-top: 10px;
-
-    height: 50px;
-    
-    border-radius: 10px;
-    border: 1px solid black;
-
-    cursor: pointer;
-}
-
-.input-border--big {
-    margin-top: 10px;
-
-    min-width: 100%;
-    height: 50px;
-
-    border-radius: 7px;
-}
-
-.input-border--xxl {
-    margin-top: 10px;
-
-    max-width: 80%;
-    min-width: 100%;
-    height: 100px;
-
-    border-radius: 7px;
-    resize: none;
-
-    padding: 25px;
+.radio-btn p {
     font-size: 20px;
-    font-family: "Karla";
-}
-
-.margin-top {
-    margin-top: 40px;
-}
-
-.input-border--xxl:hover,  .input-border--big:hover, .input-border:hover {
-
-    border: 2px solid var(--btn-color);
-}
-
-.input-border--xxl:focus,  .input-border--big:focus, .input-border:focus, .radio-btn:focus-within {
-
-    border: 2px solid var(--btn-color);
-    background-color: var(--bg-color);
 }
 
 .btn {
@@ -196,17 +162,11 @@ body {
     font-size: 20px;
 }
 
-p {
-    font-size: 25px;
-}
-
 .star {
     color: var(--btn-color);
 }
 
-
-
-@media (max-width:780px) {
+@media (max-width: 780px) {
     .form {
         justify-content: center;
         align-items: center;
@@ -218,29 +178,17 @@ p {
         gap: 10px;
     }
 
-     .form-name {
+    .form-name {
         flex-direction: column;
         gap: 20px;
         align-self: center;
     }
 
-    .margin-top {
-    margin-top: 20px;
-    }
-
-    .input-border--xxl {
-        max-width: 50%;
-        height: 200px;
-
-    }
-
-    .form-name .input-border {
-        min-width: 100%;
-        max-width: 60%;
-    }
-
     .form {
         padding: 20 40px;
-        max-width: 60;
+    }
+
+    .margin-top {
+        margin-top: 20px;
     }
 }
