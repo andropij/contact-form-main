@@ -13,54 +13,80 @@
     />
   </head>
   <body>
-    <section class="form ">
+    <section class="form">
       <h1>Contact Us</h1>
       <form action="" method="post">
         <div class="form-name margin-top">
           <div class="name">
-            <p>First name *</p>
-            <input type="text" class="input-border" required />
+            <p>First name <span class="star">*</span></p>
+            <p><input type="text" class="input-border" required /></p>
+            <p class="my-custom-alert" role="alert">Это поле обязательно!</p>
           </div>
           <div class="name">
-            <p>Last name *</p>
-            <input type="text" class="input-border" required />
+            <p>Last name <span class="star">*</span></p>
+            <p>
+              <input type="text" class="input-border" required />
+            </p>
           </div>
         </div>
         <div class="form-email margin-top">
-          <p>Email adress *</p>
-          <label
-            ><input type="email" required class="input-border--big"
-          /></label>
-          <div class="my-custom-alert" role="alert">
-            Это мое настраиваемое уведомление!
-          </div>
+          <p>Email adress <span class="star">*</span></p>
+          <p>
+            <label
+              ><input type="email" required class="input-border--big"
+            /></label>
+          </p>
+
+          <p class="my-custom-alert" role="alert">
+            Введите адрес электронной почты!
+          </p>
         </div>
         <div class="form-radio margin-top">
-          <p>Query type *</p>
+          <p>Query type <span class="star">*</span></p>
+          <p></p>
           <div class="radio">
             <div class="radio-btn input-border">
-              <input type="radio" required />
+              <input
+                type="radio"
+                name="radio-group"
+                value="option1"
+                class="btn"
+                required
+              />
               <p>General Enquiry</p>
             </div>
             <div class="radio-btn input-border">
-              <input type="radio" required />
+              <input
+                type="radio"
+                name="radio-group"
+                value="option2"
+                class="btn"
+                required
+              />
               <p>Support Request</p>
             </div>
           </div>
         </div>
         <div class="form-message margin-top">
-          <p>Message *</p>
-          <textarea
-            name="message"
-            id=""
-            class="input-border--xxl"
-            required
-          ></textarea>
+          <p>Message <span class="star">*</span></p>
+          <p>
+            <textarea
+              name="message"
+              id=""
+              class="input-border--xxl"
+              required
+            ></textarea>
+          </p>
         </div>
+
         <div class="form-checkbox margin-top">
-          <input type="checkbox" required />
-          <p>I consent to being cotacted by the team *</p>
+          <input type="checkbox" id="checkbox1" required />
+          <label for="checkbox1"
+            >I consent to being cotacted by the team <span>*</span></label
+          >
+          <p></p>
         </div>
+
         <div class="form-submit margin-top">
           <label><input type="submit" class="input-border--big" /></label>
         </div>
