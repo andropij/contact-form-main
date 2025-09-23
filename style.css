@@ -165,6 +165,10 @@ body {
 
     border-radius: 7px;
     resize: none;
+
+    padding: 25px;
+    font-size: 20px;
+    font-family: "Karla";
 }
 
 .margin-top {
