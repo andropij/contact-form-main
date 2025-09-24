@@ -1,96 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>contact-form-main</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <section class="form">
-      <h1>Contact Us</h1>
-      <form action="" method="post">
-        <div class="form-name margin-top">
-          <div class="name">
-            <p>First name <span class="star">*</span></p>
-            <p><input type="text" class="input-border" required /></p>
-            <p class="my-custom-alert" role="alert">Это поле обязательно!</p>
-          </div>
-          <div class="name">
-            <p>Last name <span class="star">*</span></p>
-            <p>
-              <input type="text" class="input-border" required />
-            </p>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>contact-form-main</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Karla:ital,wght@0,200..800;1,200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <section class="form">
+    <h1>Contact Us</h1>
+    <form action="" method="post">
+      <div class="form-name margin-top">
+        <div class="name">
+          <p>First name <span class="star">*</span></p>
+          <p><input type="text" required /></p>
+          <p class="my-custom-alert" role="alert">First name is required!</p>
         </div>
-        <div class="form-email margin-top">
-          <p>Email adress <span class="star">*</span></p>
+        <div class="name">
+          <p>Last name <span class="star">*</span></p>
           <p>
-            <label
-              ><input type="email" required class="input-border--big"
-            /></label>
-          </p>
-
-          <p class="my-custom-alert" role="alert">
-            Введите адрес электронной почты!
+            <input type="text" required />
           </p>
         </div>
-        <div class="form-radio margin-top">
-          <p>Query type <span class="star">*</span></p>
-          <p></p>
-          <div class="radio">
-            <div class="radio-btn input-border">
-              <input
-                type="radio"
-                name="radio-group"
-                value="option1"
-                class="btn"
-                required
-              />
-              <p>General Enquiry</p>
-            </div>
-            <div class="radio-btn input-border">
-              <input
-                type="radio"
-                name="radio-group"
-                value="option2"
-                class="btn"
-                required
-              />
-              <p>Support Request</p>
-            </div>
+      </div>
+      <div class="form-email margin-top">
+        <p>Email adress <span class="star">*</span></p>
+        <p>
+          <label><input type="email" required /></label>
+        </p>
+
+        <p class="my-custom-alert" role="alert">
+          Email address is required!
+        </p>
+      </div>
+      <div class="form-radio margin-top">
+        <p>Query type <span class="star">*</span></p>
+        <p></p>
+        <div class="radio">
+          <div class="radio-btn">
+            <input type="radio" name="radio-group" value="option1" class="btn" required />
+            <p>General Enquiry</p>
+          </div>
+          <div class="radio-btn">
+            <input type="radio" name="radio-group" value="option2" class="btn" required />
+            <p>Support Request</p>
           </div>
         </div>
-        <div class="form-message margin-top">
-          <p>Message <span class="star">*</span></p>
-          <p>
-            <textarea
-              name="message"
-              id=""
-              class="input-border--xxl"
-              required
-            ></textarea>
-          </p>
-        </div>
+      </div>
+      <div class="form-message margin-top">
+        <p>Message <span class="star">*</span></p>
+        <p>
+          <textarea id="message" name="message" required></textarea>
+        </p>
+      </div>
 
-        <div class="form-checkbox margin-top">
-          <input type="checkbox" id="checkbox1" required />
-          <label for="checkbox1"
-            >I consent to being cotacted by the team <span>*</span></label
-          >
-          <p></p>
-        </div>
+      <div class="form-checkbox margin-top">
+        <input type="checkbox" id="checkbox1" required />
+        <label for="checkbox1">I consent to being cotacted by the team <span>*</span></label>
+        <p></p>
+      </div>
 
-        <div class="form-submit margin-top">
-          <label><input type="submit" class="input-border--big" /></label>
-        </div>
-      </form>
-    </section>
-  </body>
+      <div class="form-submit margin-top">
+        <label><input type="submit" class="input-border--big" value="Submit" /></label>
+      </div>
+    </form>
+  </section>
+</body>
+
 </html>
